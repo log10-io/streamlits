@@ -259,23 +259,3 @@ class Suggestions:
             log10_tags,
         )
         return suggestions
-
-
-"""
-# tagging
-def select_incorrect_examples(
-    df_summary,
-    gt_label: str,
-    num_samples: int,
-    accuracy_cutoff: float,
-    col_name: Optional[str] = "accuracy",
-) -> List[str]:
-    #Return a list of sample_ids to use for examples of assistant doing badly
-    # TODO move outside of function to only do 1x
-    dfs = df_summary[df_summary["gt_label"] == gt_label].sort_values(
-        col_name, ascending=True
-    )
-    dfs = dfs[dfs[col_name] < accuracy_cutoff]
-
-    return dfs.index[:num_samples].tolist()
-"""
