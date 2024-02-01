@@ -1,0 +1,10 @@
+name: dds_app
+channels:
+ - conda-forge 
+dependencies:
+ - python=3.11.5
+ - pip=23.3.2
+ - pip:
+    - streamlit
+    - log10-io==0.5
+    - openai==1.6.1
